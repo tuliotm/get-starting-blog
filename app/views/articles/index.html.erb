@@ -1,15 +1,22 @@
-<h1>Articles</h1>
+<div class="">
+  <div class="mb-5">
+    <h1 class="text-5xl font-bold underline pb-3 mb-3">
+      Articles
+    </h1>
+    <p class="text-3xl"> Our blog has <%= Article.public_count %> articles and counting!</p>
+  </div>
+  <hr class="mb-6">
+  <div>
+    <ul>
+      <% @articles.each do |article| %>
+        <% unless article.archived? %>
+          <li class="hover:underline list-disc ml-5 mb-3 text-[18px]">
+            <%= link_to article.title, article %>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
 
-Our blog has <%= Article.public_count %> articles and counting!
-
-<ul>
-  <% @articles.each do |article| %>
-    <% unless article.archived? %>
-      <li>
-        <%= link_to article.title, article %>
-      </li>
-    <% end %>
-  <% end %>
-</ul>
-
-<%= link_to "New Article", new_article_path %>
+  <button class="bg-purple-800 border-solid border-2 border-white-500 hover:bg-sky-200 hover:text-black p-3 rounded-2xl mt-1"><%= link_to "New Article", new_article_path %></button>
+</div>

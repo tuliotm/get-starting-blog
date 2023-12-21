@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>GettingStartedBlog</title>
+    <title>Tulio Blog</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="w-full bg-[url('https://images.pexels.com/photos/998641/pexels-photo-998641.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')]">
+    <header class="bg-white w-full text-black p-6 mb-3 text-xl">
+      <a href="/" class="flex gap-1 justify-center">
+        <%= image_tag 'logo.png', alt: 'Blog logo' %>  
+        <span>Get Starting Rails</span>
+      </a>
+    </header>
+      <main class="w-full flex-column mx-5">
+        <%= yield %>
+      </main>
   </body>
 </html>
