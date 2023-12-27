@@ -1,24 +1,68 @@
-# README
+# Rails Getting Started Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Table of Contents
+- [Introduction](#introduction)
+- [Technologies](#technologies)
+- [Database Config](#database-config)
+- [Containers Construction](#containers-construction)
+- [Server execution](#server-execution)
+- [Documentation](#documentation)
 
-Things you may want to cover:
+## Introduction
 
-* Ruby version
+This project uses [Getting Started with Rails](https://guides.rubyonrails.org/getting_started.html) as a base project for study, and it extends to whatever else comes to mind for practice and web development using Ruby on Rails.
 
-* System dependencies
+## Technologies
+This project uses:
+ - [Rails v7.1.2](https://rubyonrails.org/)
+ - [Ruby v3.2.1](https://www.ruby-lang.org/en/)
+ - [Bundler v2.4.9](https://bundler.io/)
+ - [Docker](https://docs.docker.com/compose/install/)
+ - [PostgreSQL](https://www.postgresql.org/docs/current/installation.html)
 
-* Configuration
+### Database Config
 
-* Database creation
+Open the .env file and modify the variables according to your context.
 
-* Database initialization
+You can find your "Host name/address" and "Username" inside your pgAdmin under the "Connection" tab.
 
-* How to run the test suite
+![Image](examples/readme.png)
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+### Containers Construction
 
-* ...
+* Build the images:
+
+```console
+docker-compose build
+```
+
+* Create your database:
+
+```console
+docker-compose run web rails db:create db:migrate
+```
+
+* Start the containers:
+
+```console
+docker-compose up -d
+```
+
+* Enter the container that contains the Rails application:
+
+```console
+docker-compose exec web bash
+```
+
+### Server execution
+
+* Start Sidekiq to run background jobs:
+
+```console
+sidekiq
+```
+
+## Documentation
+
+Coming soon...
