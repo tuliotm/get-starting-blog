@@ -55,6 +55,29 @@ docker-compose up -d
 docker-compose exec web bash
 ```
 
+* --------------- Only in the first time, do it ---------------
+
+* Inside the bash, run:
+```console
+./bin/dev
+```
+
+* Finish the containers:
+```console
+docker-compose down
+```
+
+* Start again the containers with:
+```console
+docker-compose up
+```
+
+or
+
+```console
+docker-compose up -d
+```
+
 ### Server execution
 
 * Start Sidekiq to run background jobs:
