@@ -60,11 +60,13 @@ group :development do
   # gem "spring"
 end
 
-
+# Integrate Tailwind CSS with the asset pipeline in Rails.
 gem "tailwindcss-rails", "~> 2.1"
 
+# Autoload dotenv in Rails.
 gem 'dotenv-rails'
 
+# Simple, efficient background processing for Ruby.
 gem 'sidekiq'
 
 # Use Json Web Token (JWT) for token based authentication
