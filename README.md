@@ -64,7 +64,7 @@ docker-compose up
 docker-compose exec web bash
 ```
 
---------------- The first time only, follow the instructions below. ---------------
+**--------------- The first time only, follow the instructions below. ---------------**
 
 * Inside the bash, run:
 ```console
