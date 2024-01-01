@@ -6,6 +6,7 @@
 - [Database Config](#database-config)
 - [Containers Construction](#containers-construction)
 - [Server execution](#server-execution)
+- [Debug your Application](#debug-your-application)
 - [Documentation](#documentation)
 
 ## Introduction
@@ -84,6 +85,17 @@ docker-compose up -d
 
 ```console
 sidekiq
+```
+
+## Debug your Application
+* With the containers up, open another terminal and attach it to the web container using the following command:
+ ```console
+docker attach container_id
+```
+
+* You can find your container ID using the following command:
+ ```console
+docker container ls
 ```
 
 ## Documentation
