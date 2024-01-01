@@ -23,11 +23,12 @@ This project uses:
 
 ### Database Config
 
-Open the .env file and modify the variables according to your context.
+Create the .env file and modify the variables according to your context.
+![Env](examples/env.jpeg)
 
 You can find your "Host name/address" and "Username" inside your pgAdmin under the "Connection" tab.
 
-![Image](examples/readme.png)
+![Pgadmin](examples/pgadmin.png)
 
 
 ### Containers Construction
