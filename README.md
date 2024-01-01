@@ -52,13 +52,19 @@ docker-compose run web rails db:create db:migrate
 docker-compose up -d
 ```
 
+or
+
+```console
+docker-compose up
+```
+
 * Enter the container that contains the Rails application:
 
 ```console
 docker-compose exec web bash
 ```
 
-* --------------- Only in the first time, do it ---------------
+--------------- The first time only, follow the instructions below. ---------------
 
 * Inside the bash, run:
 ```console
@@ -70,16 +76,7 @@ docker-compose exec web bash
 docker-compose down
 ```
 
-* Start again the containers with:
-```console
-docker-compose up
-```
-
-or
-
-```console
-docker-compose up -d
-```
+* Restart the containers
 
 ### Server execution
 
