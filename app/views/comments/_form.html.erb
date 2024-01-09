@@ -1,17 +1,23 @@
 <%= form_with model: [ @article, @article.comments.build ] do |form| %>
   <p>
     <%= form.label :commenter %><br>
-    <%= form.text_field :commenter %>
+    <div class="text-black">
+      <%= form.text_field :commenter %>
+    </div>
   </p>
   <p>
     <%= form.label :body %><br>
-    <%= form.text_field :body %>
+    <div class="text-black">
+      <%= form.text_field :body %>
+    </div>
   </p>
   <p>
     <%= form.submit %><br>
   </p>
   <p>
     <%= form.label :status %><br>
-    <%= form.select :status, Visible::VALID_STATUSES, selected: 'public' %>
+    <div class="text-black">
+      <%= form.select :status, Visible::VALID_STATUSES, selected: 'public' %>
+    </div>
   </p>
 <% end %>
