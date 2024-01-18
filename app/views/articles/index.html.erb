@@ -1,6 +1,6 @@
 <div class="">
   <div class="mb-5">
-    <h1 class="text-5xl font-bold underline pb-3 mb-3">
+    <h1 class="font-bold mb-3 pb-3 text-5xl underline">
       Articles
     </h1>
     <p class="text-3xl"> Our blog has <%= Article.public_count %> articles and counting!</p>
@@ -18,5 +18,7 @@
     </ul>
   </div>
 
-  <button class="bg-purple-800 border-solid border-2 border-white-500 hover:bg-sky-200 hover:text-black p-3 rounded-2xl mt-1"><%= link_to "New Article", new_article_path %></button>
+  <button class="bg-purple-800 border-solid border-2 border-white-500 hover:bg-sky-200 hover:text-black p-3 rounded-2xl mt-1">
+    <%= link_to "New Article", new_article_path %>
+  </button>
 </div>
